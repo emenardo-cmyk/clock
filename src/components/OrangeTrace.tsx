@@ -65,7 +65,7 @@ export function OrangeTrace({
       <path
         className="guide-stroke"
         d={path}
-        stroke="#E8612C"
+        stroke="#E8501E"
         strokeWidth="1.5"
         strokeLinecap="round"
         pathLength="1"
@@ -76,7 +76,7 @@ export function OrangeTrace({
         cx={labelX - 18}
         cy={labelY - 4}
         r="3.5"
-        fill="#E8612C"
+        fill="#E8501E"
         style={{ animationDelay: "520ms" }}
       />
       {label ? (
@@ -84,7 +84,7 @@ export function OrangeTrace({
           className="guide-label"
           x={labelX}
           y={labelY}
-          fill="#E8612C"
+          fill="#B83A12"
           fontSize="14"
           fontFamily="var(--font-geist-sans), system-ui, sans-serif"
           letterSpacing="-0.02em"

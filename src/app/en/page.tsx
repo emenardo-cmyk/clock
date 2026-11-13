@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { SiteShell } from "@/components/SiteShell";
 
 export const metadata: Metadata = {
-  title: "Emiliano Menardo — Law & Technology",
+  title: "AI compliance Argentina | Emiliano Menardo",
   description:
-    "Guidance on Artificial Intelligence law, data, and technology. Classical foundations, new problems. Puerto Madryn · Argentina.",
+    "AI governance consulting, EU AI Act and Argentine Act 25.326 for companies in Argentina.",
   alternates: {
     canonical: "/en",
     languages: {

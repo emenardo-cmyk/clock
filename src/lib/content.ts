@@ -1,12 +1,18 @@
 export type Locale = "es" | "en";
 
-export type PracticeItem = {
+export type ServiceItem = {
   id: string;
   title: { es: string; en: string };
+  forWhom: { es: string; en: string };
+  deliverable: { es: string; en: string };
+  timeline: { es: string; en: string };
   keyword: { es: string; en: string };
-  body: { es: string; en: string };
   image: string;
   imageAlt: { es: string; en: string };
+  /** SVG path that follows the illustration geometry */
+  tracePath: string;
+  labelX: number;
+  labelY: number;
 };
 
 export type InsightItem = {
@@ -22,29 +28,42 @@ export const site = {
   linkedin: "https://linkedin.com/in/emenardo",
   x: "https://x.com/emenardo",
   email: "hola@emilianomenardo.com",
+  /** Reemplazar con tu número real: https://wa.me/54911XXXXXXXX */
+  whatsapp: "https://wa.me/5491100000000",
+  calendly: "#contacto",
   location: {
-    es: "Puerto Madryn, Chubut · Argentina",
-    en: "Puerto Madryn, Chubut · Argentina",
+    es: "Puerto Madryn · Argentina",
+    en: "Puerto Madryn · Argentina",
   },
+  matriculado: false,
 };
 
-export const practices: PracticeItem[] = [
+export const services: ServiceItem[] = [
   {
     id: "ia",
     title: {
-      es: "Regulación y compliance de IA",
-      en: "AI regulation & compliance",
+      es: "Gobernanza y compliance de IA",
+      en: "AI governance & compliance",
     },
+    forWhom: {
+      es: "Para startups y pymes que venden a la UE o usan modelos de IA en producto.",
+      en: "For startups and SMEs selling to the EU or shipping AI in product.",
+    },
+    deliverable: {
+      es: "Mapa de riesgos + checklist AI Act aplicable a tu operación.",
+      en: "Risk map + AI Act checklist tailored to your operation.",
+    },
+    timeline: { es: "2–3 semanas", en: "2–3 weeks" },
     keyword: { es: "AI Act", en: "AI Act" },
-    body: {
-      es: "Marcos internacionales y el AI Act europeo para equipos que operan con la UE.",
-      en: "International frameworks and the EU AI Act for teams operating with Europe.",
-    },
-    image: "/illustrations/ionic-capital.jpg",
+    image: "/illustrations/ionic-capital.webp",
     imageAlt: {
-      es: "Grabado de un capitel jónico",
-      en: "Engraving of an Ionic capital",
+      es: "Grabado a lápiz de un capitel jónico romano",
+      en: "Pencil engraving of a Roman Ionic capital",
     },
+    tracePath:
+      "M 98 152 C 98 128, 116 112, 138 112 C 162 112, 178 130, 178 152 C 178 176, 160 192, 138 192 C 122 192, 112 180, 112 166 C 112 154, 122 146, 134 146 C 144 146, 150 152, 150 160",
+    labelX: 200,
+    labelY: 108,
   },
   {
     id: "datos",
@@ -52,101 +71,53 @@ export const practices: PracticeItem[] = [
       es: "Protección de datos personales",
       en: "Personal data protection",
     },
-    keyword: { es: "Ley 25.326", en: "Act 25.326" },
-    body: {
-      es: "Ley 25.326 y regímenes comparados para productos que tratan datos.",
-      en: "Argentine Act 25.326 and comparative regimes for data-driven products.",
+    forWhom: {
+      es: "Para equipos de producto y legal que tratan datos de clientes o empleados.",
+      en: "For product and legal teams handling customer or employee data.",
     },
-    image: "/illustrations/bronze-tablet.jpg",
+    deliverable: {
+      es: "Diagnóstico Ley 25.326 + plan de gaps priorizado.",
+      en: "Act 25.326 diagnosis + prioritized gap plan.",
+    },
+    timeline: { es: "2 semanas", en: "2 weeks" },
+    keyword: { es: "25.326", en: "25.326" },
+    image: "/illustrations/roman-arch.webp",
     imageAlt: {
-      es: "Grabado de una tabla con inscripción latina",
-      en: "Engraving of a tablet with Latin inscription",
+      es: "Grabado a lápiz de un arco romano",
+      en: "Pencil engraving of a Roman arch",
     },
+    tracePath: "M 70 210 C 120 120, 180 90, 240 120 C 280 145, 300 180, 310 210",
+    labelX: 318,
+    labelY: 118,
   },
   {
-    id: "contratos",
+    id: "rrhh",
     title: {
-      es: "Contratos tecnológicos",
-      en: "Technology contracts",
+      es: "IA en RR.HH. y operaciones",
+      en: "AI in HR & operations",
     },
-    keyword: { es: "SaaS", en: "SaaS" },
-    body: {
-      es: "SaaS, licencias de software y acuerdos entre producto, proveedores y clientes.",
-      en: "SaaS, software licenses, and agreements across product, vendors, and clients.",
+    forWhom: {
+      es: "Para áreas de personas que usan IA en selección, evaluación o nómina.",
+      en: "For people teams using AI in hiring, evaluation, or payroll.",
     },
-    image: "/illustrations/roman-column.jpg",
+    deliverable: {
+      es: "Política de uso de IA + matriz de riesgos laborales y de datos.",
+      en: "AI use policy + labor and data risk matrix.",
+    },
+    timeline: { es: "1–2 semanas", en: "1–2 weeks" },
+    keyword: { es: "RR.HH.", en: "HR" },
+    image: "/illustrations/roman-column.webp",
     imageAlt: {
-      es: "Grabado de una columna romana estriada",
-      en: "Engraving of a fluted Roman column",
+      es: "Grabado a lápiz de una columna romana estriada",
+      en: "Pencil engraving of a fluted Roman column",
     },
-  },
-  {
-    id: "pi",
-    title: {
-      es: "Propiedad intelectual e IA",
-      en: "IP and generative AI",
-    },
-    keyword: { es: "Autoría", en: "Authorship" },
-    body: {
-      es: "Contenido generado por IA, derechos de autor y límites de uso.",
-      en: "AI-generated content, copyright, and usage boundaries.",
-    },
-    image: "/illustrations/corinthian-fragment.jpg",
-    imageAlt: {
-      es: "Grabado de un fragmento de capitel corintio",
-      en: "Engraving of a Corinthian capital fragment",
-    },
-  },
-  {
-    id: "algoritmos",
-    title: {
-      es: "Responsabilidad algorítmica",
-      en: "Algorithmic liability",
-    },
-    keyword: { es: "Decisión", en: "Decision" },
-    body: {
-      es: "Riesgos de sistemas automatizados y criterios de atribución de responsabilidad.",
-      en: "Risks of automated systems and criteria for attributing liability.",
-    },
-    image: "/illustrations/roman-arch.jpg",
-    imageAlt: {
-      es: "Grabado de un arco romano",
-      en: "Engraving of a Roman arch",
-    },
-  },
-  {
-    id: "espacial",
-    title: {
-      es: "Legal Tech y Derecho Espacial",
-      en: "Legal Tech & Space Law",
-    },
-    keyword: { es: "Órbita", en: "Orbit" },
-    body: {
-      es: "Área de interés: herramientas jurídicas digitales y el régimen del espacio ultraterrestre.",
-      en: "Area of interest: legal tech tools and the law of outer space.",
-    },
-    image: "/illustrations/armillary-sphere.jpg",
-    imageAlt: {
-      es: "Grabado de una esfera armilar",
-      en: "Engraving of an armillary sphere",
-    },
+    tracePath: "M 160 40 L 160 260",
+    labelX: 190,
+    labelY: 70,
   },
 ];
 
 export const insights: InsightItem[] = [
-  {
-    slug: "fundamentos-clasicos",
-    date: "2026-11-01",
-    title: {
-      es: "Fundamentos clásicos, problemas nuevos",
-      en: "Classical foundations, new problems",
-    },
-    tag: { es: "Ensayo", en: "Essay" },
-    excerpt: {
-      es: "Por qué el Derecho Romano sigue siendo útil para pensar IA, datos y responsabilidad.",
-      en: "Why Roman law still helps us think about AI, data, and liability.",
-    },
-  },
   {
     slug: "ai-act-lectura-argentina",
     date: "2026-10-12",
@@ -156,8 +127,8 @@ export const insights: InsightItem[] = [
     },
     tag: { es: "Regulación", en: "Regulation" },
     excerpt: {
-      es: "Notas breves sobre extraterritorialidad y compliance para equipos locales.",
-      en: "Short notes on extraterritorial reach and compliance for local teams.",
+      es: "Extraterritorialidad y compliance para equipos locales que operan con la UE.",
+      en: "Extraterritorial reach and compliance for local teams working with the EU.",
     },
   },
   {
@@ -178,79 +149,97 @@ export const insights: InsightItem[] = [
 export const copy = {
   es: {
     nav: {
-      areas: "Áreas",
-      metodo: "Método",
+      servicios: "Servicios",
       sobre: "Sobre mí",
       insights: "Insights",
       contacto: "Contacto",
     },
     hero: {
-      wordTop: "Derecho",
-      wordBottom: "inteligente",
+      title: "Compliance de IA, sin rodeos",
       subtitle:
-        "Orientación legal en Inteligencia Artificial, datos y tecnología.",
-      cta: "Conversemos",
-      note: "Fundamentos clásicos, problemas nuevos.",
+        "Para startups y pymes argentinas que usan IA o venden a la UE. Claridad en 20 minutos.",
+      cta: "Agendá 20 minutos sin costo",
+      whatsapp: "WhatsApp",
     },
-    areas: {
-      title: "Áreas",
-      lead: "Cada tema con su elemento romano. El trazo naranja marca la palabra clave.",
+    problem: {
+      title: "El riesgo ya está en tu operación",
+      items: [
+        {
+          title: "Multas y frenos comerciales",
+          text: "Tratar datos sin marco claro bajo la Ley 25.326.",
+        },
+        {
+          title: "Contratos con clientes de la UE",
+          text: "El AI Act ya condiciona a proveedores fuera de Europa.",
+        },
+        {
+          title: "IA en RR.HH.",
+          text: "Selección o evaluación automatizada sin criterios documentados.",
+        },
+      ],
+    },
+    services: {
+      title: "Servicios",
+      forWhom: "Para quién",
+      deliverable: "Entregable",
+      timeline: "Plazo",
     },
     method: {
-      title: "Método",
-      lead: "Tres pasos. Línea clara.",
+      title: "Cómo trabajo",
       steps: [
         {
           name: "Diagnóstico",
-          text: "Mapear el riesgo real del producto, el dato o el contrato.",
+          text: "Reviso tu stack, contratos y flujos de datos. En una llamada sabés el mapa.",
         },
         {
-          name: "Estrategia",
-          text: "Definir el marco aplicable y las decisiones que importan.",
+          name: "Plan",
+          text: "Priorizo gaps: qué frenar, qué documentar, qué dejar para después.",
         },
         {
           name: "Implementación",
-          text: "Bajar a cláusulas, procesos y documentación usable.",
+          text: "Bajo a políticas, checklists y cláusulas. El patrocinio jurídico lo cubren abogados matriculados.",
         },
       ],
     },
     about: {
       title: "Sobre mí",
-      bio: "Soy Emiliano Menardo. Cursando Abogacía en la Universidad de Palermo, desde Puerto Madryn, Chubut. Me interesa el cruce entre Derecho Romano, tecnología e Inteligencia Artificial — y, como área de exploración, el Derecho Espacial.",
-      formation: "Formación",
-      formationItems: [
-        "Abogacía — Universidad de Palermo",
-        "Enfoque en Derecho y Tecnología / IA",
-        "Interés en Legal Tech y Derecho Espacial",
+      bio: "Estudiante avanzado de Abogacía (Universidad de Palermo). Experiencia en operaciones globales de RR.HH. en una multinacional y trabajo en un estudio jurídico. Cruce entre Derecho, personas y tecnología.",
+      trustTitle: "Confianza",
+      testimonials: [
+        {
+          quote:
+            "[COMPLETAR] “Emiliano ordenó el uso de IA en nuestro proceso de selección en dos semanas.”",
+          role: "[COMPLETAR] — Head of People, startup SaaS",
+        },
+        {
+          quote:
+            "[COMPLETAR] “Nos dejó un checklist AI Act usable para el equipo de producto.”",
+          role: "[COMPLETAR] — COO, pyme que exporta a la UE",
+        },
       ],
-      context:
-        "Experiencia profesional previa en operaciones de HR y sistemas de nómina (contexto laboral, no servicio jurídico).",
       disclaimer:
-        "Aún no hay matrícula profesional publicada. Este sitio no ofrece representación letrada ni constituye publicidad de estudio jurídico.",
+        "No estoy matriculado. Ofrezco consultoría en gobernanza de IA y datos. El patrocinio jurídico lo brindan abogados matriculados.",
     },
     insights: {
-      title: "Publicaciones",
-      lead: "Notas editoriales. Poca frecuencia, texto corto.",
+      title: "Insights",
       read: "Leer",
     },
-    quote: {
-      latin: "Ubi societas, ibi ius",
-      translation: "Donde hay sociedad, hay derecho.",
-    },
     contact: {
-      title: "Contacto",
-      lead: "Nombre, email y una consulta breve.",
+      title: "Hablemos",
+      lead: "Contame en una línea qué IA o datos están en juego.",
       name: "Nombre",
       email: "Email",
       message: "Consulta",
       submit: "Enviar",
-      privacy: "Al enviar, aceptás el aviso de privacidad.",
-      privacyLink: "Aviso de privacidad",
-      social: "También en",
+      privacy: "Al enviar, aceptás el",
+      privacyLink: "aviso de privacidad",
+      whatsapp: "O escribinos por WhatsApp",
     },
     footer: {
-      rights: "Emiliano Menardo",
-      tagline: "Derecho · Tecnología · IA",
+      latin: "Ubi societas, ibi ius",
+      translation: "Donde hay sociedad, hay derecho.",
+      cta: "Agendá 20 minutos sin costo",
+      tagline: "Gobernanza de IA y datos · Argentina",
     },
     article: {
       back: "Volver",
@@ -259,78 +248,97 @@ export const copy = {
   },
   en: {
     nav: {
-      areas: "Areas",
-      metodo: "Method",
+      servicios: "Services",
       sobre: "About",
       insights: "Insights",
       contacto: "Contact",
     },
     hero: {
-      wordTop: "Smart",
-      wordBottom: "law",
-      subtitle: "Legal guidance on Artificial Intelligence, data, and technology.",
-      cta: "Let’s talk",
-      note: "Classical foundations, new problems.",
+      title: "AI compliance, no fluff",
+      subtitle:
+        "For Argentine startups and SMEs using AI or selling to the EU. Clarity in 20 minutes.",
+      cta: "Book 20 free minutes",
+      whatsapp: "WhatsApp",
     },
-    areas: {
-      title: "Areas",
-      lead: "Each topic with its Roman element. The orange stroke marks the keyword.",
+    problem: {
+      title: "The risk is already in your ops",
+      items: [
+        {
+          title: "Fines and commercial friction",
+          text: "Handling data without a clear Act 25.326 frame.",
+        },
+        {
+          title: "Contracts with EU clients",
+          text: "The AI Act already reaches non-EU providers.",
+        },
+        {
+          title: "AI in HR",
+          text: "Automated hiring or evaluation without documented criteria.",
+        },
+      ],
+    },
+    services: {
+      title: "Services",
+      forWhom: "For whom",
+      deliverable: "Deliverable",
+      timeline: "Timeline",
     },
     method: {
-      title: "Method",
-      lead: "Three steps. A clean line.",
+      title: "How I work",
       steps: [
         {
           name: "Diagnosis",
-          text: "Map the real risk in the product, the data, or the contract.",
+          text: "I review your stack, contracts, and data flows. One call maps the risk.",
         },
         {
-          name: "Strategy",
-          text: "Define the applicable frame and the decisions that matter.",
+          name: "Plan",
+          text: "I prioritize gaps: what to stop, document, or defer.",
         },
         {
           name: "Implementation",
-          text: "Translate into clauses, processes, and usable documentation.",
+          text: "Policies, checklists, and clauses. Licensed attorneys handle formal legal sponsorship.",
         },
       ],
     },
     about: {
       title: "About",
-      bio: "I’m Emiliano Menardo. Studying Law at Universidad de Palermo, based in Puerto Madryn, Chubut. I work at the intersection of Roman law, technology, and Artificial Intelligence — with Space Law as an area of interest.",
-      formation: "Background",
-      formationItems: [
-        "Law degree in progress — Universidad de Palermo",
-        "Focus on Law & Technology / AI",
-        "Interest in Legal Tech and Space Law",
+      bio: "Advanced Law student (Universidad de Palermo). Background in global HR ops at a multinational and work at a law firm. The intersection of law, people, and technology.",
+      trustTitle: "Trust",
+      testimonials: [
+        {
+          quote:
+            "[TO COMPLETE] “Emiliano sorted AI use in our hiring process in two weeks.”",
+          role: "[TO COMPLETE] — Head of People, SaaS startup",
+        },
+        {
+          quote:
+            "[TO COMPLETE] “He left us an AI Act checklist our product team can use.”",
+          role: "[TO COMPLETE] — COO, SME exporting to the EU",
+        },
       ],
-      context:
-        "Prior professional experience in HR operations and payroll systems (professional context, not a legal service).",
       disclaimer:
-        "No professional bar registration is published yet. This site does not offer legal representation or advertise a law firm.",
+        "I am not a licensed attorney. I offer AI and data governance consulting. Licensed attorneys provide formal legal sponsorship.",
     },
     insights: {
       title: "Insights",
-      lead: "Editorial notes. Low frequency, short text.",
       read: "Read",
     },
-    quote: {
-      latin: "Ubi societas, ibi ius",
-      translation: "Where there is society, there is law.",
-    },
     contact: {
-      title: "Contact",
-      lead: "Name, email, and a short note.",
+      title: "Let’s talk",
+      lead: "Tell me in one line which AI or data is at stake.",
       name: "Name",
       email: "Email",
       message: "Message",
       submit: "Send",
-      privacy: "By sending, you accept the privacy notice.",
-      privacyLink: "Privacy notice",
-      social: "Also on",
+      privacy: "By sending, you accept the",
+      privacyLink: "privacy notice",
+      whatsapp: "Or message on WhatsApp",
     },
     footer: {
-      rights: "Emiliano Menardo",
-      tagline: "Law · Technology · AI",
+      latin: "Ubi societas, ibi ius",
+      translation: "Where there is society, there is law.",
+      cta: "Book 20 free minutes",
+      tagline: "AI & data governance · Argentina",
     },
     article: {
       back: "Back",

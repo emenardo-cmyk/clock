@@ -7,8 +7,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/`, lastModified: updated, changeFrequency: "monthly", priority: 1 },
     { url: `${base}/en`, lastModified: updated, changeFrequency: "monthly", priority: 0.9 },
     {
-      url: `${base}/insights/fundamentos-clasicos`,
-      lastModified: new Date("2026-11-01"),
+      url: `${base}/insights/ai-act-lectura-argentina`,
+      lastModified: new Date("2026-10-12"),
+      changeFrequency: "yearly",
+      priority: 0.7,
+    },
+    {
+      url: `${base}/insights/datos-producto`,
+      lastModified: new Date("2026-09-20"),
       changeFrequency: "yearly",
       priority: 0.7,
     },

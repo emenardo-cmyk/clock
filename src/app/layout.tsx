@@ -23,21 +23,28 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://emilianomenardo.com
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Emiliano Menardo — Derecho y Tecnología",
+    default: "Compliance de IA Argentina | Emiliano Menardo",
     template: "%s · Emiliano Menardo",
   },
   description:
-    "Orientación en Derecho e Inteligencia Artificial, datos y tecnología. Fundamentos clásicos, problemas nuevos. Puerto Madryn · Argentina.",
+    "Consultoría en gobernanza y compliance de IA, AI Act europeo y protección de datos Ley 25.326 para empresas argentinas.",
+  keywords: [
+    "compliance de IA Argentina",
+    "AI Act Argentina",
+    "protección de datos Ley 25.326",
+    "gobernanza de IA",
+    "consultoría datos personales",
+  ],
   openGraph: {
     type: "website",
     locale: "es_AR",
     alternateLocale: ["en_US"],
-    title: "Emiliano Menardo — Derecho y Tecnología",
+    title: "Compliance de IA Argentina | Emiliano Menardo",
     description:
-      "Orientación en Derecho e Inteligencia Artificial, datos y tecnología.",
+      "Gobernanza de IA, AI Act y Ley 25.326 para startups y pymes argentinas.",
     images: [
       {
-        url: "/og/capitel.jpg",
+        url: "/og/capitel.webp",
         width: 1152,
         height: 864,
         alt: "Capitel jónico — Emiliano Menardo",
@@ -46,15 +53,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Emiliano Menardo — Derecho y Tecnología",
+    title: "Compliance de IA Argentina | Emiliano Menardo",
     description:
-      "Orientación en Derecho e Inteligencia Artificial, datos y tecnología.",
-    images: ["/og/capitel.jpg"],
+      "Gobernanza de IA, AI Act y Ley 25.326 para startups y pymes argentinas.",
+    images: ["/og/capitel.webp"],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
   alternates: {
     languages: {
       "es-AR": "/",
@@ -68,7 +72,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Emiliano Menardo",
-    jobTitle: "Law student · Technology & AI law focus",
+    jobTitle: "AI & data governance consultant",
+    description:
+      "Consultoría en gobernanza de IA, AI Act y protección de datos (Ley 25.326) para empresas argentinas.",
     url: siteUrl,
     address: {
       "@type": "PostalAddress",
@@ -80,21 +86,20 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       "@type": "CollegeOrUniversity",
       name: "Universidad de Palermo",
     },
-    sameAs: [
-      "https://linkedin.com/in/emenardo",
-      "https://x.com/emenardo",
-    ],
+    sameAs: ["https://linkedin.com/in/emenardo", "https://x.com/emenardo"],
     knowsAbout: [
-      "Artificial Intelligence law",
+      "AI Act",
+      "AI compliance",
+      "Ley 25.326",
       "Data protection",
-      "Technology contracts",
-      "Space law",
+      "HR technology",
     ],
   };
 
   return (
     <html
-      lang="es"
+      lang="es-AR"
+      translate="no"
       className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-paper text-ink">

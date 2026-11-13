@@ -1,46 +1,35 @@
-# Emiliano Menardo — web profesional
+# Emiliano Menardo — consultoría en gobernanza de IA y datos
 
-Sitio minimalista editorial: **Derecho + Tecnología / IA**, estética “romano técnico”.
-
-Stack: **Next.js (App Router) · TypeScript · Tailwind CSS v4 · Vercel-ready**.
+Sitio minimalista (Next.js + Tailwind) orientado a conversión.
 
 ## Design tokens
 
 | Token | Valor | Uso |
 | --- | --- | --- |
 | `--paper` | `#ECE8E1` | Fondo |
-| `--paper-alt` | `#F2EFEA` | Alternativa |
 | `--ink` | `#141414` | Texto |
-| `--line` | `#B9B4AC` | Guías / hairlines |
-| `--accent` | `#E8612C` | Trazo, punto, CTA, hover |
+| `--line` | `#B9B4AC` | Guías |
+| `--accent` | `#E8501E` | Trazos / borde CTA |
+| `--accent-text` | `#B83A12` | Texto naranja (contraste AA) |
 
-Tipografía:
+## Secciones
 
-- **Geist** — titulares y UI (tracking negativo)
-- **Cormorant Garamond** — citas latinas en mayúsculas (uso mínimo)
-
-## Componentes
-
-- `HeroClassic` — hero asimétrico con capitel
-- `ConstructionLines` — guías SVG animadas
-- `OrangeTrace` — trazo naranja + keyword
-- `PracticeArea` — área con ilustración romana
-- `Quote` — “Ubi societas, ibi ius”
-- Switch ES/EN en header (`I18nProvider`)
+1. Hero · 2. Problema · 3. Servicios (3) · 4. Método · 5. Sobre mí · 6. Insights + Contacto + Footer
 
 ## Scripts
 
 ```bash
 npm run dev
 npm run build
-npm run start
-npm run lint
 ```
 
-## Nota profesional
+## Completar antes de publicar
 
-Sin matrícula publicada al momento de construir este sitio. El copy **no** ofrece representación letrada. Schema.org usa `Person` (no `Attorney` / `LegalService`).
+- WhatsApp real en `src/lib/content.ts` → `site.whatsapp`
+- Email real → `site.email`
+- Calendly (opcional) → `site.calendly`
+- 1–2 testimonios reales
+- Confirmar LinkedIn / X
+- Matrícula: hoy `matriculado: false}`
 
-## Deploy
-
-Listo para Vercel. No publicar hasta revisar assets y copy con Emiliano.
+No publicar hasta revisar copy e ilustraciones.
