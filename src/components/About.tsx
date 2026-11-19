@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { site } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
 
@@ -8,43 +9,45 @@ export function About() {
   const { c, locale } = useI18n();
 
   return (
-    <section id="sobre" className="section-pad border-b border-line/50">
-      <div className="container-narrow grid items-start gap-10 md:grid-cols-12">
-        <div className="relative aspect-[3/4] w-full max-w-sm md:col-span-5">
-          <Image
-            src="/illustrations/marcus-aurelius.webp"
-            alt={
-              locale === "es"
-                ? "Grabado a lápiz del busto de Marco Aurelio"
-                : "Pencil engraving of the bust of Marcus Aurelius"
-            }
-            fill
-            sizes="(max-width: 768px) 90vw, 35vw"
-            className="object-cover object-top"
-          />
-        </div>
+    <section id="sobre" className="section-y border-t border-line/80">
+      <div className="container-page grid items-start gap-10 md:grid-cols-12">
+        <ScrollReveal className="md:col-span-5">
+          <div className="relative aspect-[3/4] w-full max-w-sm overflow-hidden rounded-2xl border border-line bg-surface">
+            <Image
+              src="/illustrations/marcus-aurelius.webp"
+              alt={
+                locale === "es"
+                  ? "Grabado a lápiz del busto de Marco Aurelio"
+                  : "Pencil engraving of the bust of Marcus Aurelius"
+              }
+              fill
+              sizes="(max-width: 768px) 90vw, 35vw"
+              className="object-cover object-top"
+            />
+          </div>
+        </ScrollReveal>
 
-        <div className="md:col-span-6 md:col-start-7">
-          <h2 className="display-title mb-5 text-4xl md:text-5xl">{c.about.title}</h2>
-          <p className="mb-4 max-w-xl text-lg leading-snug text-ink/85">{c.about.bio}</p>
-          <p className="mb-8 text-sm text-ink/50">{site.location[locale]}</p>
+        <ScrollReveal className="md:col-span-6 md:col-start-7">
+          <h2 className="heading-2">{c.about.title}</h2>
+          <p className="body-3 mt-5 max-w-xl text-ink-muted">{c.about.bio}</p>
+          <p className="caption-2 mt-4 text-ink-muted">{site.location[locale]}</p>
 
-          <h3 className="mb-4 text-xs tracking-[0.14em] text-ink/55 uppercase">
+          <h3 className="title-4 mt-10 text-ink-muted uppercase tracking-[0.12em]">
             {c.about.trustTitle}
           </h3>
-          <ul className="mb-8 space-y-5">
+          <ul className="mt-4 space-y-4">
             {c.about.testimonials.map((item) => (
-              <li key={item.role} className="border-l border-accent pl-4">
-                <p className="text-sm text-ink/80">{item.quote}</p>
-                <p className="mt-2 text-xs text-ink/45">{item.role}</p>
+              <li
+                key={item.role}
+                className="rounded-2xl border border-line bg-surface p-5"
+              >
+                <p className="body-5 text-ink-muted">{item.quote}</p>
+                <p className="caption-4 mt-3 text-ink-muted">{item.role}</p>
               </li>
             ))}
           </ul>
-
-          <p className="max-w-xl text-xs leading-relaxed text-ink/50">
-            {c.about.disclaimer}
-          </p>
-        </div>
+          <p className="caption-5 mt-6 max-w-xl text-ink-muted">{c.about.disclaimer}</p>
+        </ScrollReveal>
       </div>
     </section>
   );

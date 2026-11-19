@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,12 +10,6 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
-
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://emilianomenardo.com";
@@ -33,7 +27,6 @@ export const metadata: Metadata = {
     "AI Act Argentina",
     "protección de datos Ley 25.326",
     "gobernanza de IA",
-    "consultoría datos personales",
   ],
   openGraph: {
     type: "website",
@@ -72,7 +65,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Emiliano Menardo",
-    jobTitle: "AI & data governance consultant",
+    jobTitle: "AI and data governance consultant",
     description:
       "Consultoría en gobernanza de IA, AI Act y protección de datos (Ley 25.326) para empresas argentinas.",
     url: siteUrl,
@@ -87,22 +80,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       name: "Universidad de Palermo",
     },
     sameAs: ["https://linkedin.com/in/emenardo", "https://x.com/emenardo"],
-    knowsAbout: [
-      "AI Act",
-      "AI compliance",
-      "Ley 25.326",
-      "Data protection",
-      "HR technology",
-    ],
+    knowsAbout: ["AI Act", "AI compliance", "Ley 25.326", "Data protection"],
   };
 
   return (
     <html
       lang="es-AR"
       translate="no"
-      className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-paper text-ink">
+      <body className="flex min-h-full flex-col bg-paper text-ink font-sans">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}

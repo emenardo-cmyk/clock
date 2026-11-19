@@ -7,12 +7,6 @@ export type ServiceItem = {
   deliverable: { es: string; en: string };
   timeline: { es: string; en: string };
   keyword: { es: string; en: string };
-  image: string;
-  imageAlt: { es: string; en: string };
-  /** SVG path that follows the illustration geometry */
-  tracePath: string;
-  labelX: number;
-  labelY: number;
 };
 
 export type InsightItem = {
@@ -28,12 +22,11 @@ export const site = {
   linkedin: "https://linkedin.com/in/emenardo",
   x: "https://x.com/emenardo",
   email: "hola@emilianomenardo.com",
-  /** Reemplazar con tu número real: https://wa.me/54911XXXXXXXX */
   whatsapp: "https://wa.me/5491100000000",
   calendly: "#contacto",
   location: {
-    es: "Puerto Madryn · Argentina",
-    en: "Puerto Madryn · Argentina",
+    es: "Puerto Madryn, Argentina",
+    en: "Puerto Madryn, Argentina",
   },
   matriculado: false,
 };
@@ -43,27 +36,18 @@ export const services: ServiceItem[] = [
     id: "ia",
     title: {
       es: "Gobernanza y compliance de IA",
-      en: "AI governance & compliance",
+      en: "AI governance and compliance",
     },
     forWhom: {
-      es: "Para startups y pymes que venden a la UE o usan modelos de IA en producto.",
-      en: "For startups and SMEs selling to the EU or shipping AI in product.",
+      es: "Startups y pymes que venden a la UE o usan modelos de IA en producto.",
+      en: "Startups and SMEs selling to the EU or shipping AI in product.",
     },
     deliverable: {
-      es: "Mapa de riesgos + checklist AI Act aplicable a tu operación.",
-      en: "Risk map + AI Act checklist tailored to your operation.",
+      es: "Mapa de riesgos y checklist AI Act aplicable a tu operación.",
+      en: "Risk map and AI Act checklist tailored to your operation.",
     },
-    timeline: { es: "2–3 semanas", en: "2–3 weeks" },
+    timeline: { es: "2 a 3 semanas", en: "2 to 3 weeks" },
     keyword: { es: "AI Act", en: "AI Act" },
-    image: "/illustrations/ionic-capital.webp",
-    imageAlt: {
-      es: "Grabado a lápiz de un capitel jónico romano",
-      en: "Pencil engraving of a Roman Ionic capital",
-    },
-    tracePath:
-      "M 98 152 C 98 128, 116 112, 138 112 C 162 112, 178 130, 178 152 C 178 176, 160 192, 138 192 C 122 192, 112 180, 112 166 C 112 154, 122 146, 134 146 C 144 146, 150 152, 150 160",
-    labelX: 200,
-    labelY: 108,
   },
   {
     id: "datos",
@@ -72,48 +56,32 @@ export const services: ServiceItem[] = [
       en: "Personal data protection",
     },
     forWhom: {
-      es: "Para equipos de producto y legal que tratan datos de clientes o empleados.",
-      en: "For product and legal teams handling customer or employee data.",
+      es: "Equipos de producto y legal que tratan datos de clientes o empleados.",
+      en: "Product and legal teams handling customer or employee data.",
     },
     deliverable: {
-      es: "Diagnóstico Ley 25.326 + plan de gaps priorizado.",
-      en: "Act 25.326 diagnosis + prioritized gap plan.",
+      es: "Diagnóstico Ley 25.326 y plan de gaps priorizado.",
+      en: "Act 25.326 diagnosis and prioritized gap plan.",
     },
     timeline: { es: "2 semanas", en: "2 weeks" },
-    keyword: { es: "25.326", en: "25.326" },
-    image: "/illustrations/roman-arch.webp",
-    imageAlt: {
-      es: "Grabado a lápiz de un arco romano",
-      en: "Pencil engraving of a Roman arch",
-    },
-    tracePath: "M 70 210 C 120 120, 180 90, 240 120 C 280 145, 300 180, 310 210",
-    labelX: 318,
-    labelY: 118,
+    keyword: { es: "Ley 25.326", en: "Act 25.326" },
   },
   {
     id: "rrhh",
     title: {
       es: "IA en RR.HH. y operaciones",
-      en: "AI in HR & operations",
+      en: "AI in HR and operations",
     },
     forWhom: {
-      es: "Para áreas de personas que usan IA en selección, evaluación o nómina.",
-      en: "For people teams using AI in hiring, evaluation, or payroll.",
+      es: "Áreas de personas que usan IA en selección, evaluación o nómina.",
+      en: "People teams using AI in hiring, evaluation, or payroll.",
     },
     deliverable: {
-      es: "Política de uso de IA + matriz de riesgos laborales y de datos.",
-      en: "AI use policy + labor and data risk matrix.",
+      es: "Política de uso de IA y matriz de riesgos laborales y de datos.",
+      en: "AI use policy and labor and data risk matrix.",
     },
-    timeline: { es: "1–2 semanas", en: "1–2 weeks" },
+    timeline: { es: "1 a 2 semanas", en: "1 to 2 weeks" },
     keyword: { es: "RR.HH.", en: "HR" },
-    image: "/illustrations/roman-column.webp",
-    imageAlt: {
-      es: "Grabado a lápiz de una columna romana estriada",
-      en: "Pencil engraving of a fluted Roman column",
-    },
-    tracePath: "M 160 40 L 160 260",
-    labelX: 190,
-    labelY: 70,
   },
 ];
 
@@ -150,19 +118,24 @@ export const copy = {
   es: {
     nav: {
       servicios: "Servicios",
+      metodo: "Método",
       sobre: "Sobre mí",
       insights: "Insights",
+      faq: "FAQ",
       contacto: "Contacto",
     },
     hero: {
-      title: "Compliance de IA, sin rodeos",
+      titleLine1: "Compliance de IA",
+      titleLine2: "sin rodeos",
       subtitle:
         "Para startups y pymes argentinas que usan IA o venden a la UE. Claridad en 20 minutos.",
       cta: "Agendá 20 minutos sin costo",
       whatsapp: "WhatsApp",
+      proof: "Gobernanza de IA, datos y AI Act para equipos que construyen.",
     },
     problem: {
       title: "El riesgo ya está en tu operación",
+      lead: "Tres frenos concretos cuando la IA o los datos avanzan sin un marco.",
       items: [
         {
           title: "Multas y frenos comerciales",
@@ -178,11 +151,30 @@ export const copy = {
         },
       ],
     },
-    services: {
-      title: "Servicios",
-      forWhom: "Para quién",
-      deliverable: "Entregable",
-      timeline: "Plazo",
+    benefits: {
+      title: "Qué obtenés",
+      items: [
+        {
+          title: "Un mapa legible",
+          text: "Sabés qué sistemas, datos y decisiones disparan riesgo real.",
+        },
+        {
+          title: "Prioridades accionables",
+          text: "Qué frenar esta semana, qué documentar y qué dejar para después.",
+        },
+        {
+          title: "Entregables usables",
+          text: "Checklists, políticas y cláusulas que el equipo puede aplicar.",
+        },
+        {
+          title: "Riesgo reversible",
+          text: "Primera llamada sin costo. Sin matrícula: el patrocinio jurídico lo cubren abogados matriculados.",
+        },
+      ],
+    },
+    tagline: {
+      line1: "Fundamentos clásicos.",
+      line2: "Problemas nuevos.",
     },
     method: {
       title: "Cómo trabajo",
@@ -201,20 +193,26 @@ export const copy = {
         },
       ],
     },
+    services: {
+      title: "Servicios",
+      forWhom: "Para quién",
+      deliverable: "Entregable",
+      timeline: "Plazo",
+    },
     about: {
       title: "Sobre mí",
-      bio: "Estudiante avanzado de Abogacía (Universidad de Palermo). Experiencia en operaciones globales de RR.HH. en una multinacional y trabajo en un estudio jurídico. Cruce entre Derecho, personas y tecnología.",
+      bio: "Estudiante avanzado de Abogacía en la Universidad de Palermo. Experiencia en operaciones globales de RR.HH. en una multinacional y trabajo en un estudio jurídico. Cruce entre Derecho, personas y tecnología.",
       trustTitle: "Confianza",
       testimonials: [
         {
           quote:
-            "[COMPLETAR] “Emiliano ordenó el uso de IA en nuestro proceso de selección en dos semanas.”",
-          role: "[COMPLETAR] — Head of People, startup SaaS",
+            "{{testimonial}} “Emiliano ordenó el uso de IA en nuestro proceso de selección en dos semanas.”",
+          role: "{{role}} Head of People, startup SaaS",
         },
         {
           quote:
-            "[COMPLETAR] “Nos dejó un checklist AI Act usable para el equipo de producto.”",
-          role: "[COMPLETAR] — COO, pyme que exporta a la UE",
+            "{{testimonial}} “Nos dejó un checklist AI Act usable para el equipo de producto.”",
+          role: "{{role}} COO, pyme que exporta a la UE",
         },
       ],
       disclaimer:
@@ -224,44 +222,82 @@ export const copy = {
       title: "Insights",
       read: "Leer",
     },
+    faq: {
+      title: "Preguntas frecuentes",
+      items: [
+        {
+          q: "¿Ofrecés representación letrada?",
+          a: "No. Ofrezco consultoría en gobernanza de IA y datos. El patrocinio jurídico lo brindan abogados matriculados.",
+        },
+        {
+          q: "¿Para quién es esto?",
+          a: "Startups y pymes argentinas que usan IA, tratan datos personales o venden a la UE.",
+        },
+        {
+          q: "¿Qué pasa en los 20 minutos sin costo?",
+          a: "Mapeamos tu stack, el tipo de dato o modelo, y si el AI Act o la Ley 25.326 aplican. Salís con prioridades claras.",
+        },
+        {
+          q: "¿Trabajás con equipos de RR.HH.?",
+          a: "Sí. Especialmente cuando hay IA en selección, evaluación o sistemas de nómina.",
+        },
+        {
+          q: "¿Cuánto tarda un diagnóstico?",
+          a: "Entre una y tres semanas según el alcance. Lo acordamos en la primera llamada.",
+        },
+        {
+          q: "¿Cómo se factura?",
+          a: "Por proyecto acotado. Te paso alcance y plazo por escrito antes de empezar.",
+        },
+      ],
+    },
     contact: {
       title: "Hablemos",
       lead: "Contame en una línea qué IA o datos están en juego.",
       name: "Nombre",
       email: "Email",
       message: "Consulta",
-      submit: "Enviar",
+      submit: "Enviar consulta",
       privacy: "Al enviar, aceptás el",
       privacyLink: "aviso de privacidad",
       whatsapp: "O escribinos por WhatsApp",
+      errorRequired: "Completá este campo.",
+      errorEmail: "Ingresá un email válido.",
     },
     footer: {
       latin: "Ubi societas, ibi ius",
       translation: "Donde hay sociedad, hay derecho.",
       cta: "Agendá 20 minutos sin costo",
-      tagline: "Gobernanza de IA y datos · Argentina",
-    },
-    article: {
-      back: "Volver",
-      published: "Publicado",
+      tagline: "Gobernanza de IA y datos",
+      columns: {
+        nav: "Navegación",
+        services: "Servicios",
+        resources: "Recursos",
+        company: "Empresa",
+      },
     },
   },
   en: {
     nav: {
       servicios: "Services",
+      metodo: "Method",
       sobre: "About",
       insights: "Insights",
+      faq: "FAQ",
       contacto: "Contact",
     },
     hero: {
-      title: "AI compliance, no fluff",
+      titleLine1: "AI compliance",
+      titleLine2: "without the noise",
       subtitle:
         "For Argentine startups and SMEs using AI or selling to the EU. Clarity in 20 minutes.",
       cta: "Book 20 free minutes",
       whatsapp: "WhatsApp",
+      proof: "AI governance, data, and the AI Act for teams that build.",
     },
     problem: {
       title: "The risk is already in your ops",
+      lead: "Three concrete blockers when AI or data move without a frame.",
       items: [
         {
           title: "Fines and commercial friction",
@@ -269,7 +305,7 @@ export const copy = {
         },
         {
           title: "Contracts with EU clients",
-          text: "The AI Act already reaches non-EU providers.",
+          text: "The AI Act already reaches non EU providers.",
         },
         {
           title: "AI in HR",
@@ -277,11 +313,30 @@ export const copy = {
         },
       ],
     },
-    services: {
-      title: "Services",
-      forWhom: "For whom",
-      deliverable: "Deliverable",
-      timeline: "Timeline",
+    benefits: {
+      title: "What you get",
+      items: [
+        {
+          title: "A readable map",
+          text: "You know which systems, data, and decisions create real risk.",
+        },
+        {
+          title: "Actionable priorities",
+          text: "What to stop this week, what to document, and what to defer.",
+        },
+        {
+          title: "Usable deliverables",
+          text: "Checklists, policies, and clauses your team can apply.",
+        },
+        {
+          title: "Reversible risk",
+          text: "First call is free. Not a licensed attorney: formal legal sponsorship is handled by licensed counsel.",
+        },
+      ],
+    },
+    tagline: {
+      line1: "Classical foundations.",
+      line2: "New problems.",
     },
     method: {
       title: "How I work",
@@ -300,20 +355,26 @@ export const copy = {
         },
       ],
     },
+    services: {
+      title: "Services",
+      forWhom: "For whom",
+      deliverable: "Deliverable",
+      timeline: "Timeline",
+    },
     about: {
       title: "About",
-      bio: "Advanced Law student (Universidad de Palermo). Background in global HR ops at a multinational and work at a law firm. The intersection of law, people, and technology.",
+      bio: "Advanced Law student at Universidad de Palermo. Background in global HR ops at a multinational and work at a law firm. The intersection of law, people, and technology.",
       trustTitle: "Trust",
       testimonials: [
         {
           quote:
-            "[TO COMPLETE] “Emiliano sorted AI use in our hiring process in two weeks.”",
-          role: "[TO COMPLETE] — Head of People, SaaS startup",
+            "{{testimonial}} “Emiliano sorted AI use in our hiring process in two weeks.”",
+          role: "{{role}} Head of People, SaaS startup",
         },
         {
           quote:
-            "[TO COMPLETE] “He left us an AI Act checklist our product team can use.”",
-          role: "[TO COMPLETE] — COO, SME exporting to the EU",
+            "{{testimonial}} “He left us an AI Act checklist our product team can use.”",
+          role: "{{role}} COO, SME exporting to the EU",
         },
       ],
       disclaimer:
@@ -323,26 +384,59 @@ export const copy = {
       title: "Insights",
       read: "Read",
     },
+    faq: {
+      title: "FAQ",
+      items: [
+        {
+          q: "Do you offer legal representation?",
+          a: "No. I offer AI and data governance consulting. Licensed attorneys provide formal legal sponsorship.",
+        },
+        {
+          q: "Who is this for?",
+          a: "Argentine startups and SMEs using AI, handling personal data, or selling to the EU.",
+        },
+        {
+          q: "What happens in the free 20 minutes?",
+          a: "We map your stack, the data or model in play, and whether the AI Act or Act 25.326 apply. You leave with clear priorities.",
+        },
+        {
+          q: "Do you work with HR teams?",
+          a: "Yes. Especially when AI is used in hiring, evaluation, or payroll systems.",
+        },
+        {
+          q: "How long does a diagnosis take?",
+          a: "Between one and three weeks depending on scope. We agree in the first call.",
+        },
+        {
+          q: "How do you bill?",
+          a: "Scoped projects. You get written scope and timeline before we start.",
+        },
+      ],
+    },
     contact: {
       title: "Let’s talk",
       lead: "Tell me in one line which AI or data is at stake.",
       name: "Name",
       email: "Email",
       message: "Message",
-      submit: "Send",
+      submit: "Send message",
       privacy: "By sending, you accept the",
       privacyLink: "privacy notice",
       whatsapp: "Or message on WhatsApp",
+      errorRequired: "Please complete this field.",
+      errorEmail: "Enter a valid email.",
     },
     footer: {
       latin: "Ubi societas, ibi ius",
       translation: "Where there is society, there is law.",
       cta: "Book 20 free minutes",
-      tagline: "AI & data governance · Argentina",
-    },
-    article: {
-      back: "Back",
-      published: "Published",
+      tagline: "AI and data governance",
+      columns: {
+        nav: "Navigation",
+        services: "Services",
+        resources: "Resources",
+        company: "Company",
+      },
     },
   },
 } as const;
