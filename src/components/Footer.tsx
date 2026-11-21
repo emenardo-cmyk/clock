@@ -46,7 +46,12 @@ export function Footer() {
           <div className="mb-12 max-w-2xl">
             <p className="heading-4 tracking-[-0.02em]">{c.footer.latin}</p>
             <p className="body-6 mt-3 text-ink-muted">{c.footer.translation}</p>
-            <a href={site.calendly} className="btn-primary button-md mt-8 inline-flex">
+            <a
+              href={site.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary button-md mt-8 inline-flex"
+            >
               {c.footer.cta}
               <ArrowRight size={16} weight="bold" />
             </a>

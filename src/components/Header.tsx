@@ -3,6 +3,7 @@
 import { List, X } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { BrandMark } from "@/components/BrandMark";
+import { site } from "@/lib/content";
 import { useI18n } from "@/lib/i18n";
 
 export function Header() {
@@ -51,7 +52,12 @@ export function Header() {
             >
               {locale === "es" ? "EN" : "ES"}
             </button>
-            <a href="#contacto" className="btn-primary button-sm hidden sm:inline-flex">
+            <a
+              href={site.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary button-sm hidden sm:inline-flex"
+            >
               {c.nav.contacto}
             </a>
             <button

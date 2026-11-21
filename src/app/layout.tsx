@@ -12,46 +12,47 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://emilianomenardo.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://menardo.com.ar";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Compliance de IA Argentina | Emiliano Menardo",
+    default: "Gobernanza de IA y datos | Emiliano Menardo",
     template: "%s · Emiliano Menardo",
   },
   description:
-    "Consultoría en gobernanza y compliance de IA, AI Act europeo y protección de datos Ley 25.326 para empresas argentinas.",
+    "Consultoría en gobernanza de IA, AI Act y protección de datos Ley 25.326 para startups y pymes argentinas. Primera conversación por WhatsApp.",
   keywords: [
-    "compliance de IA Argentina",
+    "gobernanza de IA Argentina",
     "AI Act Argentina",
-    "protección de datos Ley 25.326",
-    "gobernanza de IA",
+    "Ley 25.326",
+    "compliance de IA",
+    "Emiliano Menardo",
   ],
   openGraph: {
     type: "website",
     locale: "es_AR",
     alternateLocale: ["en_US"],
-    title: "Compliance de IA Argentina | Emiliano Menardo",
+    title: "Gobernanza de IA y datos | Emiliano Menardo",
     description:
-      "Gobernanza de IA, AI Act y Ley 25.326 para startups y pymes argentinas.",
+      "IA, datos y gestión para empresas argentinas. Criterios claros en 20 minutos.",
     images: [
       {
-        url: "/og/capitel.webp",
-        width: 1152,
+        url: "/live/fondo-v3.jpg",
+        width: 1536,
         height: 864,
-        alt: "Capitel jónico — Emiliano Menardo",
+        alt: "Emiliano Menardo — IA, datos y gestión",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Compliance de IA Argentina | Emiliano Menardo",
+    title: "Gobernanza de IA y datos | Emiliano Menardo",
     description:
-      "Gobernanza de IA, AI Act y Ley 25.326 para startups y pymes argentinas.",
-    images: ["/og/capitel.webp"],
+      "IA, datos y gestión para empresas argentinas. Criterios claros en 20 minutos.",
+    images: ["/live/fondo-v3.jpg"],
   },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: false },
   alternates: {
     languages: {
       "es-AR": "/",
@@ -66,8 +67,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     "@type": "Person",
     name: "Emiliano Menardo",
     jobTitle: "AI and data governance consultant",
-    description:
-      "Consultoría en gobernanza de IA, AI Act y protección de datos (Ley 25.326) para empresas argentinas.",
+    email: "e@menardo.com.ar",
     url: siteUrl,
     address: {
       "@type": "PostalAddress",
@@ -75,12 +75,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       addressRegion: "Chubut",
       addressCountry: "AR",
     },
-    alumniOf: {
-      "@type": "CollegeOrUniversity",
-      name: "Universidad de Palermo",
-    },
-    sameAs: ["https://linkedin.com/in/emenardo", "https://x.com/emenardo"],
-    knowsAbout: ["AI Act", "AI compliance", "Ley 25.326", "Data protection"],
+    sameAs: ["https://linkedin.com/in/emenardo", "https://x.com/menardiando"],
+    knowsAbout: ["AI Act", "Ley 25.326", "AI governance", "Data protection"],
   };
 
   return (

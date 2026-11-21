@@ -13,7 +13,7 @@ import { PracticeAreas } from "@/components/PracticeAreas";
 import { Problem } from "@/components/Problem";
 import { TaglineReveal } from "@/components/TaglineReveal";
 import { I18nProvider } from "@/lib/i18n";
-import type { Locale } from "@/lib/content";
+import { site, type Locale } from "@/lib/content";
 
 export function SiteShell({ initialLocale = "es" }: { initialLocale?: Locale }) {
   return (
@@ -32,6 +32,7 @@ export function SiteShell({ initialLocale = "es" }: { initialLocale?: Locale }) 
         <Contact />
       </main>
       <Footer />
+      {site.beta ? <div className="beta-chip">Beta · 2026</div> : null}
     </I18nProvider>
   );
 }

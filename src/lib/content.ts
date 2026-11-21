@@ -20,15 +20,18 @@ export type InsightItem = {
 export const site = {
   name: "Emiliano Menardo",
   linkedin: "https://linkedin.com/in/emenardo",
-  x: "https://x.com/emenardo",
-  email: "hola@emilianomenardo.com",
-  whatsapp: "https://wa.me/5491100000000",
+  x: "https://x.com/menardiando",
+  email: "e@menardo.com.ar",
+  whatsapp:
+    "https://wa.me/5492805035947?text=Hola%20Emiliano%2C%20te%20escribo%20desde%20tu%20web.",
   calendly: "#contacto",
+  cv: "/live/Emiliano_Menardo_CV.pdf",
   location: {
     es: "Puerto Madryn, Argentina",
     en: "Puerto Madryn, Argentina",
   },
   matriculado: false,
+  beta: true,
 };
 
 export const services: ServiceItem[] = [
@@ -125,13 +128,14 @@ export const copy = {
       contacto: "Contacto",
     },
     hero: {
-      titleLine1: "Compliance de IA",
-      titleLine2: "sin rodeos",
+      titleLine1: "La inteligencia artificial",
+      titleLine2: "ya llegó.",
       subtitle:
-        "Para startups y pymes argentinas que usan IA o venden a la UE. Claridad en 20 minutos.",
-      cta: "Agendá 20 minutos sin costo",
-      whatsapp: "WhatsApp",
-      proof: "Gobernanza de IA, datos y AI Act para equipos que construyen.",
+        "Ayudo a startups y pymes argentinas a convivir con IA, datos y gestión: AI Act, Ley 25.326 y criterios claros en 20 minutos.",
+      cta: "Escribime por WhatsApp",
+      whatsapp: "O dejá tu consulta",
+      proof: "IA, datos y gestión · Puerto Madryn",
+      beta: "Beta",
     },
     problem: {
       title: "El riesgo ya está en tu operación",
@@ -167,8 +171,8 @@ export const copy = {
           text: "Checklists, políticas y cláusulas que el equipo puede aplicar.",
         },
         {
-          title: "Riesgo reversible",
-          text: "Primera llamada sin costo. Sin matrícula: el patrocinio jurídico lo cubren abogados matriculados.",
+          title: "Primera conversación sin costo",
+          text: "Empezamos por WhatsApp o una llamada corta. El patrocinio jurídico lo cubren abogados matriculados.",
         },
       ],
     },
@@ -201,7 +205,7 @@ export const copy = {
     },
     about: {
       title: "Sobre mí",
-      bio: "Estudiante avanzado de Abogacía en la Universidad de Palermo. Experiencia en operaciones globales de RR.HH. en una multinacional y trabajo en un estudio jurídico. Cruce entre Derecho, personas y tecnología.",
+      bio: "Hace más de veinte años trabajo donde se cruzan tecnología, personas, datos y derecho, con formación de abogado y en ciencias económicas. Acompaño a empresas a incorporar inteligencia artificial, ordenar sus datos y mejorar su gestión.",
       trustTitle: "Confianza",
       testimonials: [
         {
@@ -216,7 +220,7 @@ export const copy = {
         },
       ],
       disclaimer:
-        "No estoy matriculado. Ofrezco consultoría en gobernanza de IA y datos. El patrocinio jurídico lo brindan abogados matriculados.",
+        "No estoy matriculado como estudio jurídico. Ofrezco consultoría en gobernanza de IA y datos. El patrocinio jurídico lo brindan abogados matriculados.",
     },
     insights: {
       title: "Insights",
@@ -234,7 +238,7 @@ export const copy = {
           a: "Startups y pymes argentinas que usan IA, tratan datos personales o venden a la UE.",
         },
         {
-          q: "¿Qué pasa en los 20 minutos sin costo?",
+          q: "¿Qué pasa en la primera conversación?",
           a: "Mapeamos tu stack, el tipo de dato o modelo, y si el AI Act o la Ley 25.326 aplican. Salís con prioridades claras.",
         },
         {
@@ -267,7 +271,7 @@ export const copy = {
     footer: {
       latin: "Ubi societas, ibi ius",
       translation: "Donde hay sociedad, hay derecho.",
-      cta: "Agendá 20 minutos sin costo",
+      cta: "Escribime por WhatsApp",
       tagline: "Gobernanza de IA y datos",
       columns: {
         nav: "Navegación",
@@ -287,13 +291,14 @@ export const copy = {
       contacto: "Contact",
     },
     hero: {
-      titleLine1: "AI compliance",
-      titleLine2: "without the noise",
+      titleLine1: "Artificial intelligence",
+      titleLine2: "is here.",
       subtitle:
-        "For Argentine startups and SMEs using AI or selling to the EU. Clarity in 20 minutes.",
-      cta: "Book 20 free minutes",
-      whatsapp: "WhatsApp",
-      proof: "AI governance, data, and the AI Act for teams that build.",
+        "I help Argentine startups and SMEs live with AI, data, and management: AI Act, Act 25.326, and clear criteria in 20 minutes.",
+      cta: "Message me on WhatsApp",
+      whatsapp: "Or leave a note",
+      proof: "AI, data and management · Puerto Madryn",
+      beta: "Beta",
     },
     problem: {
       title: "The risk is already in your ops",
@@ -329,8 +334,8 @@ export const copy = {
           text: "Checklists, policies, and clauses your team can apply.",
         },
         {
-          title: "Reversible risk",
-          text: "First call is free. Not a licensed attorney: formal legal sponsorship is handled by licensed counsel.",
+          title: "First conversation free",
+          text: "We start on WhatsApp or a short call. Licensed attorneys handle formal legal sponsorship.",
         },
       ],
     },
@@ -363,7 +368,7 @@ export const copy = {
     },
     about: {
       title: "About",
-      bio: "Advanced Law student at Universidad de Palermo. Background in global HR ops at a multinational and work at a law firm. The intersection of law, people, and technology.",
+      bio: "For more than twenty years I have worked where technology, people, data, and law meet, drawing on a background in law and in business and economics. I help companies adopt artificial intelligence, organize their data, and improve management.",
       trustTitle: "Trust",
       testimonials: [
         {
@@ -378,7 +383,7 @@ export const copy = {
         },
       ],
       disclaimer:
-        "I am not a licensed attorney. I offer AI and data governance consulting. Licensed attorneys provide formal legal sponsorship.",
+        "I am not a licensed law firm. I offer AI and data governance consulting. Licensed attorneys provide formal legal sponsorship.",
     },
     insights: {
       title: "Insights",
@@ -396,7 +401,7 @@ export const copy = {
           a: "Argentine startups and SMEs using AI, handling personal data, or selling to the EU.",
         },
         {
-          q: "What happens in the free 20 minutes?",
+          q: "What happens in the first conversation?",
           a: "We map your stack, the data or model in play, and whether the AI Act or Act 25.326 apply. You leave with clear priorities.",
         },
         {
@@ -429,7 +434,7 @@ export const copy = {
     footer: {
       latin: "Ubi societas, ibi ius",
       translation: "Where there is society, there is law.",
-      cta: "Book 20 free minutes",
+      cta: "Message me on WhatsApp",
       tagline: "AI and data governance",
       columns: {
         nav: "Navigation",
